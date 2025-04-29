@@ -10,7 +10,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './student.component.css'
 })
 export class StudentComponent implements OnInit {
-
   students: Student[] =[];
   formGroupStudent: FormGroup;
 
@@ -29,14 +28,18 @@ export class StudentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getStudents().subscribe({
-        next: json => this.students = json
-    })
+    this.loadStudents();
+  }
+
+  loadStudents(){
+    this.service.getAll().subscribe({
+      next: json => this.students = json
+    });
   }
 
   save()
   {
-      this.service.saveStudent(this.formGroupStudent.value)
+      this.service.save(this.formGroupStudent.value)
                   .subscribe
       (
           {
@@ -48,4 +51,12 @@ export class StudentComponent implements OnInit {
       )
   }
 
+  delete(student: Student) {
+    this.service.delete(student).subscribe(
+      {
+        next: () => this.loadStudents()
+      }
+    );
+  }
+    
 }
