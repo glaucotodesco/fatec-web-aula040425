@@ -2,38 +2,13 @@
   "students": [
     {
       "id": 1,
-      "name": "Ana Maria",
-      "course": "Computação"
+      "name": "dddd",
+      "course": "ddddd"
     },
     {
       "id": 2,
-      "name": "Fernanda Silva",
-      "course": "Computação"
-    },
-    {
-      "id": 3,
-      "name": "Marcela Rosa",
-      "course": "Matemática"
-    },
-    {
-      "id": 4,
-      "name": "1",
-      "course": "1"
-    },
-    {
-      "id": 5,
-      "name": "3",
-      "course": "3"
-    },
-    {
-      "id": 6,
-      "name": "asddas123",
-      "course": "12321321"
-    },
-    {
-      "id": 7,
-      "name": "qeqweqw",
-      "course": "234"
+      "name": "3dsd",
+      "course": "3asdsadsa"
     }
   ]
 }
